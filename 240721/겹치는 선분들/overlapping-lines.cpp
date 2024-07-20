@@ -2,27 +2,28 @@
 #include <bits/stdc++.h>
 using namespace std;
 vector<pair<int, int>> points;
-int n,k, ans;
+int n, k, ans;
 int st;
-int ed;
+
 int main()
 {
-    cin >> n>> k;
+    cin >> n >> k;
     for (int i = 0; i < n; i++)
     {
         int n1;
         char n2;
         cin >> n1 >> n2;
-        if(n2=='R')
+        if (n2 == 'R')
         {
             points.push_back(make_pair(st, +1));
-            points.push_back(make_pair(st+n1, -1));
-            st+=n1;
+            points.push_back(make_pair(st + n1, -1));
+            st += n1;
         }
-        else{
+        else
+        {
             points.push_back(make_pair(st, -1));
-            points.push_back(make_pair(st-n1, +1));
-            st-=n1;
+            points.push_back(make_pair(st - n1, +1));
+            st -= n1;
         }
     }
     sort(points.begin(), points.end());
@@ -30,11 +31,21 @@ int main()
     for (int i = 0; i < 2 * n; i++)
     {
         sum += points[i].second;
-        if(sum>=k)
+        if (sum >= k)
         {
-            ans++;
+            int pre = points[i].first;
+            while (sum >= k)
+            {
+                i++;
+                sum += points[i].second;
+                if (sum < k)
+                {
+                    ans += points[i].first - pre;
+                    break;
+                }
+            }
         }
-    }
+     }
 
     cout << ans;
     return 0;
