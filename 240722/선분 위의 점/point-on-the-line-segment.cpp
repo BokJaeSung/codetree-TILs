@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 #define int long long
-
 using namespace std;
 int n, m;
 int arr[100001];
@@ -15,6 +14,7 @@ signed main()
     {
         cin >> arr[i];
     }
+    sort(arr, arr + n);
     while (m--)
     {
         int a, b;
