@@ -4,7 +4,7 @@ using namespace std;
 int n, m;
 int arr[100001];
 
-signed main()
+int32_t main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
