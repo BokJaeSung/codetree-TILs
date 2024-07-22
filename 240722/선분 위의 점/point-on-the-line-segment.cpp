@@ -1,9 +1,11 @@
 #include <bits/stdc++.h>
+#define int long long
+
 using namespace std;
 int n, m;
 int arr[100001];
 
-int main()
+signed main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
