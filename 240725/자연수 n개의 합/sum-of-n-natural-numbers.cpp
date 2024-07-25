@@ -7,7 +7,7 @@ using namespace std;
 signed main()
 {
     int left = 1;           
-    int right = 100000000; 
+    int right = 10000000000; 
     int max_num = 1;        
     cin >> s;
     while (left <= right)
