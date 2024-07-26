@@ -3,7 +3,7 @@
 #include <climits>
 #define int long long
 #define MAX_N 200000
-#define MAX_NUM 1000000000
+#define MAX_NUM 100000000000000
 
 using namespace std;
 
