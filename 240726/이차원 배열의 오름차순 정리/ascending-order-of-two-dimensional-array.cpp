@@ -5,7 +5,7 @@ int ans = INT_MAX;
 bool solve(int mid)
 {
     int cnt = 0;
-    for (int i = 1; i <= n + 1; i++)
+    for (int i = 1; i <= n - 1; i++)
     {
         cnt += min(n, mid / i);
     }
