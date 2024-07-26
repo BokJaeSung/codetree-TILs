@@ -1,7 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <climits>
-#define int long long;
+#define int long long
 #define MAX_N 200000
 #define MAX_NUM 1000000000
 
