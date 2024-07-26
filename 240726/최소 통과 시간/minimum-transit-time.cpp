@@ -1,7 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <climits>
-
+#define int long long;
 #define MAX_N 200000
 #define MAX_NUM 1000000000
 
@@ -18,7 +18,7 @@ bool IsPossible(int mid)
     int cnt = 0;
     for (int i = 0; i < m; i++)
     {
-        cnt += mid/arr[i];
+        cnt += mid / arr[i];
     }
     if (cnt >= n)
         return true;
@@ -28,7 +28,7 @@ bool IsPossible(int mid)
     }
 }
 
-int main()
+signed main()
 {
     // 입력
     cin >> n >> m;
@@ -46,12 +46,12 @@ int main()
     {                                 // [left, right]가 유효한 구간이면 계속 수행합니다.
         int mid = (left + right) / 2; // 가운데 위치를 선택합니다.
         if (IsPossible(mid))
-        {                        
-            right = mid - 1;      
-            ans = min(ans, mid);  
+        {
+            right = mid - 1;
+            ans = min(ans, mid);
         }
         else
-            left = mid + 1;  
+            left = mid + 1;
     }
 
     cout << ans;
