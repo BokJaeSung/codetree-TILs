@@ -2,7 +2,7 @@
 using namespace std;
 int n, m;
 int grid[21][21];
-int ans=-1;
+int ans;
 
 int solve(int x1, int y1, int x2, int y2)
 {
@@ -33,6 +33,8 @@ int main()
                 {
                     ans = max(ans, solve(i, j, k, l));
                 }
+    if (ans == 0)
+        ans = -1;
     cout << ans;
     return 0;
 }
