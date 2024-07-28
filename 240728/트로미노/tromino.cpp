@@ -2,7 +2,10 @@
 using namespace std;
 int ans, n, m;
 int board[201][201];
-
+bool In_range(int x, int y)
+{
+    return x >= 0 && x < n && y >= 0 && y < n;
+}
 int solve(int x, int y, int dir)
 {
     int cnt = 0;
@@ -61,10 +64,7 @@ int solve(int x, int y, int dir)
     }
     return cnt;
 }
-bool In_range(int x, int y)
-{
-    return x >= 0 && x < n && y >= 0 && y < n;
-}
+ 
 int main()
 {
     ios_base::sync_with_stdio(false);
