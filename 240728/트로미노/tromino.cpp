@@ -4,7 +4,7 @@ int ans, n, m;
 int board[201][201];
 bool In_range(int x, int y)
 {
-    return x >= 0 && x < n && y >= 0 && y < n;
+    return x >= 0 && x < n && y >= 0 && y < m;
 }
 int solve(int x, int y, int dir)
 {
