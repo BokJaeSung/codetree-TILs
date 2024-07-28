@@ -9,7 +9,7 @@ int solve(int x, int y, int dir)
     switch (dir)
     {
     case 0:
-        if (In_ragne(x, y + 1) && In_ragne(x - 1, y))
+        if (In_range(x, y + 1) && In_range(x - 1, y))
             cnt += board[x][y + 1] + board[x][y] + board[x - 1][y];
         else
         {
@@ -17,7 +17,7 @@ int solve(int x, int y, int dir)
         }
         break;
     case 1:
-        if (In_ragne(x, y - 1) && In_ragne(x + 1, y))
+        if (In_range(x, y - 1) && In_range(x + 1, y))
             cnt += board[x][y - 1] + board[x][y] + board[x + 1][y];
         else
         {
@@ -25,7 +25,7 @@ int solve(int x, int y, int dir)
         }
         break;
     case 2:
-        if (In_ragne(x, y + 1) && In_ragne(x + 1, y))
+        if (In_range(x, y + 1) && In_range(x + 1, y))
             cnt += board[x][y + 1] + board[x][y] + board[x + 1][y];
         else
         {
@@ -33,7 +33,7 @@ int solve(int x, int y, int dir)
         }
         break;
     case 3:
-        if (In_ragne(x, y - 1) && In_ragne(x - 1, y))
+        if (In_range(x, y - 1) && In_range(x - 1, y))
             cnt += board[x][y - 1] + board[x][y] + board[x - 1][y];
         else
         {
@@ -41,7 +41,7 @@ int solve(int x, int y, int dir)
         }
         break;
     case 4:
-        if (In_ragne(x + 1, y) && In_ragne(x - 1, y))
+        if (In_range(x + 1, y) && In_range(x - 1, y))
             cnt += board[x + 1][y] + board[x][y] + board[x - 1][y];
         else
         {
@@ -49,7 +49,7 @@ int solve(int x, int y, int dir)
         }
         break;
     case 5:
-        if (In_ragne(x, y + 1) && In_ragne(x , y-1)
+        if (In_range(x, y + 1) && In_range(x , y-1)
             cnt += board[x][y + 1] + board[x][y] + board[x][y-1];
         else
         {
@@ -61,7 +61,7 @@ int solve(int x, int y, int dir)
     }
     return cnt;
 }
-bool In_ragne(int x, int y)
+bool In_range(int x, int y)
 {
     return x >= 0 && x < n && y >= 0 && y < n;
 }
