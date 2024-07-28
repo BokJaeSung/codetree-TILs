@@ -24,9 +24,9 @@ int main()
         for (int j = 0; j < n; j++)
             for (int k = 0; k <= 2 * (n - 1); k++){
                 int num_of_gold=solve(i,j,k);
-            }
                 if (num_of_gold * m >= k * k + (k + 1) * (k + 1))
                     ans = max(ans,num_of_gold);
+            }
     cout << ans;
     return 0;
 }
