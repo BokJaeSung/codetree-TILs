@@ -80,5 +80,6 @@ int main()
             {
                 ans = max(ans, solve(i, j, dir));
             }
+            cout<<ans;
     return 0;
 }
