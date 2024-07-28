@@ -75,7 +75,7 @@ int main()
         for (int j = 0; j < n; j++)
             cin >> board[i][j];
     for (int i = 0; i< n; i++)
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < m; j++)
             for (int dir = 0; dir < 6; dir++)
             {
                 ans = max(ans, solve(i, j, dir));
