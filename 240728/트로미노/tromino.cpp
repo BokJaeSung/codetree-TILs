@@ -74,7 +74,7 @@ int main()
     for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
             cin >> board[i][j];
-    for (int i = 0; j < n; i++)
+    for (int i = 0; i< n; i++)
         for (int j = 0; j < n; j++)
             for (int dir = 0; dir < 6; dir++)
             {
