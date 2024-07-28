@@ -52,7 +52,7 @@ int solve(int x, int y, int dir)
         }
         break;
     case 5:
-        if (In_range(x, y + 1) && In_range(x , y-1)
+        if (In_range(x, y + 1) && In_range(x , y-1))
             cnt += board[x][y + 1] + board[x][y] + board[x][y-1];
         else
         {
