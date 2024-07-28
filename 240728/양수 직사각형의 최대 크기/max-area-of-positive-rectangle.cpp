@@ -2,7 +2,7 @@
 using namespace std;
 int n, m;
 int grid[21][21];
-int ans;
+int ans=-1;
 
 int solve(int x1, int y1, int x2, int y2)
 {
