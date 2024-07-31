@@ -22,7 +22,6 @@ void solve()
     for (int i = str.length() - 1; i > 0; i--)
         str[i] = str[i - 1];
     str[0] = temp;
-    cout << str << " \n";
 }
 int main()
 {
