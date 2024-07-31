@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 string str;
-int ans;
+int ans = 21;
 int check()
 {
     int cnt = 1;
@@ -22,6 +22,7 @@ void solve()
     for (int i = str.length() - 1; i > 0; i--)
         str[i] = str[i - 1];
     str[0] = temp;
+    cout << str << " \n";
 }
 int main()
 {
@@ -31,15 +32,12 @@ int main()
     cin >> str;
     int size = str.length();
     // aaabbbbcaa size:10
-    if (size == 1)
+    // abab size:4
+
+    for (int i = 0; i < size; i++)
     {
-        cout << 2;
-        return 1;
-        }
-    for (int i = 0; i < size - 1; i++)
-    {
-        ans = min(ans, check());
         solve();
+        ans = min(ans, check());
     }
     cout << ans;
     return 0;
