@@ -25,17 +25,11 @@ void solve(int row, int col, int k)
         for (int i = n; i > 0; i--)
         {
             if (board[i][j] != 0)
-            {
                 temp[temp_row--][j] = board[i][j];
-            }
-            else
-            {
-                pass = false;
-            }
+            
         }
-        if (!pass)
-            for (int i = 1; i <= n; i++)
-                board[i][j] = temp[i][j];
+        for (int i = 1; i <= n; i++)
+            board[i][j] = temp[i][j];
     }
 }
 int main()
