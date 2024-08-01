@@ -29,11 +29,14 @@ int main()
     bool did_explode;
     do
     {
-        int end;
+        
         did_explode = false;
         for (int i = 1; i <= end_of_array; i++)
         {
-            end = solve(i, arr[i]);
+              if(arr[i] == 0) { 
+                continue;
+            }
+           int  end = solve(i, arr[i]);
             if (end - i + 1 >= m)
             {
                 for (int j = i; j <= end; j++)
